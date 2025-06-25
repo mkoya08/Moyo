@@ -1,0 +1,184 @@
+/* CSS Styles - This is where we make our website look beautiful! */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.feature {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature h2 {
+  color: #495057;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.feature p {
+  color: #6c757d;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.counter-display {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 20px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/*
+  This section styles the multiplier's input area.
+  It makes the two number boxes and the × sign line up nicely in a row,
+  centers them, and makes sure they look good together.
+*/
+.input-group {
+  display: flex; /* Puts the items (inputs and ×) in a row instead of a column */
+  align-items: center; /* Vertically centers the items in the row */
+  justify-content: center; /* Horizontally centers the whole group */
+  gap: 10px; /* Adds space between the items */
+  margin: 20px 0; /* Adds space above and below the group */
+}
+
+.input-group input[type="number"] {
+  width: 100px; /* Sets the width of the number boxes */
+  height: 44px; /* Makes the number boxes the same height as the button and × sign */
+  padding: 12px 15px; /* Adds space inside the box so text isn't squished */
+  border: 2px solid #dee2e6; /* Gives the box a light border */
+  border-radius: 25px; /* Rounds the corners to make it look smooth */
+  font-size: 1rem; /* Makes the numbers easy to read */
+  text-align: center; /* Centers the number inside the box */
+  transition: border-color 0.3s ease; /* Smoothly changes border color when focused */
+}
+
+.input-group span {
+  font-size: 1.5rem; /* Makes the × sign big and easy to see */
+  margin: 0 5px; /* Adds a little space on each side of the × sign */
+  display: flex; /* Lets us center the × sign vertically */
+  align-items: center; /* Vertically centers the × sign with the inputs */
+  height: 44px; /* Makes the × sign the same height as the number boxes */
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.result {
+  background: #e3f2fd;
+  border: 2px solid #2196f3;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 1.1rem;
+  color: #1976d2;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.echo-input {
+  width: 100%;
+  max-width: 300px;
+}
+
+.code-comment {
+  background: #f1f3f4;
+  border-left: 4px solid #4285f4;
+  padding: 10px;
+  margin: 15px 0;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  color: #5f6368;
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .feature {
+    padding: 20px;
+  }
+}

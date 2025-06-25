@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- This is the head section of the HTML document -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moyo's World - Learn HTML, CSS & JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!-- This is the body section of the HTML document -->
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <div class="header">
+        <h1>🌍 Moyo's World</h1>
+        <p>Learn HTML, CSS & JavaScript with Interactive Examples</p>
+      </div>
+
+      <!-- Features Section -->
+      <div class="features">
+        <!-- Feature 1: Counter -->
+        <div class="feature">
+          <h2>🔢 Counter</h2>
+          <p>
+            Click the button to count up! This demonstrates how JavaScript can
+            change values on the page.
+          </p>
+
+          <div class="code-comment">// This shows the current count value</div>
+          <div class="counter-display" id="counter">0</div>
+
+          <button class="btn" onclick="incrementCounter()">Count Up!</button>
+          <button class="btn" onclick="resetCounter()">Reset</button>
+        </div>
+
+        <!-- Feature 2: Multiplier -->
+        <div class="feature">
+          <h2>✖️ Multiplier</h2>
+          <p>
+            Enter two numbers and see them multiplied together. This shows form
+            handling and calculations.
+          </p>
+
+          <div class="input-group">
+            <input
+              type="number"
+              id="num1"
+              placeholder="First number"
+              value="5"
+            />
+            <span style="font-size: 1.5rem; margin: 0 10px">×</span>
+            <input
+              type="number"
+              id="num2"
+              placeholder="Second number"
+              value="3"
+            />
+          </div>
+
+          <button class="btn" onclick="multiply()">Calculate!</button>
+
+          <div class="result" id="multiplyResult">
+            Enter numbers and click Calculate!
+          </div>
+        </div>
+
+        <!-- Feature 3: Echo -->
+        <div class="feature">
+          <h2>📢 Echo</h2>
+          <p>
+            Type something and see it echoed back! This demonstrates
+            input/output and string handling.
+          </p>
+
+          <div class="input-group">
+            <input
+              type="text"
+              id="echoInput"
+              class="echo-input"
+              placeholder="Type your message here..."
+              value="Hello Moyo World!"
+            />
+          </div>
+
+          <button class="btn" onclick="echo()">Echo!</button>
+
+          <div class="result" id="echoResult">
+            Your message will appear here!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- This is the script section of the HTML document -->
+    <script src="script.js"></script>
+  </body>
+</html>
